@@ -29,5 +29,14 @@ return {
 			vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, {})
 			vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 		end
+	},
+	{
+  "WhoIsSethDaniel/mason-tool-installer.nvim",
+		cmd = { "MasonToolsInstall", "MasonToolsUpdate", "MasonToolsClean" },
+		opts = {
+			ensure_installed = {
+				"prettier"
+			},
+		},
 	}
 }
