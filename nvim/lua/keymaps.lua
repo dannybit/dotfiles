@@ -15,9 +15,7 @@ keymap.set("n", "<Leader>sh", ":split<Return>", opts)
 keymap.set("n", "<Leader>sv", ":vsplit<Return>", opts)
 
 -- Diagnostics
-keymap.set("n", "<C-j>", function()
-	vim.diagnostic.goto_next()
-end, opts)
+vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 
 -- Quickfix list navigation
 vim.api.nvim_set_keymap('n', '<leader>qo', ':copen<CR>', { noremap = true, silent = true })
